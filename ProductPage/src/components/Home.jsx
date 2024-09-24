@@ -1,17 +1,25 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Form() {
+
+function Home() {
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+    const navigate = useNavigate();
 
     function submitHandler(event){
         event.preventDefault();
         console.log("Date Submitted: ", {email, password});
     }
+    
+    // Navigate to products page after login
+    if(email && password) {
+        history.push('/products');
+    }
 
  return(
     <div>
-        <h2>Customer Login</h2>
+        <h2>Login</h2>
         <form onSubmit={submitHandler}>
             <input type="email" onChange={(event)=>{setEmail(event.target.value);}} value={email} placeholder="Email" />
             <input type="password" onChange={(event)=>{setPassword(event.target.value);}} value={password} placeholder="Password" />
@@ -21,4 +29,4 @@ function Form() {
  );
 }
 
-export default Form;
+export default Home;
