@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Products() {
     return (
         <div>
-            <h2>Products</h2>
+            <h2>Be Happy Be Shabby</h2>
             {/* Add content here */}
         </div>
     );

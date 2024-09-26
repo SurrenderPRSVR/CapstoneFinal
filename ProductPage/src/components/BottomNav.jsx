@@ -4,7 +4,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home'; 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'; 
 import InfoIcon from '@mui/icons-material/Info'; 
-import PaymentIcon from '@mui/icons-material/Payment';
+import Box from '@mui/material/Box'; 
 import { useNavigate } from 'react-router-dom'; // React Router for navigation
 
 
@@ -17,8 +17,22 @@ import { useNavigate } from 'react-router-dom'; // React Router for navigation
     };
   
     return (
-    
-      <BottomNavigation sx={{ width: 500 }} value={value} onChange={handleChange}>
+      <Box 
+        sx={{ 
+          position: 'fixed', 
+          bottom: 0, 
+          left: 0, 
+          right: 0, 
+          display: 'flex', 
+          justifyContent: 'center' 
+        }}
+      >
+
+        <BottomNavigation 
+         sx={{ width: '100%', position: 'fixed', bottom: 0 }} 
+         value={value} 
+         onChange={handleChange}
+        >
         <BottomNavigationAction
           label="Home"
           value="home"
@@ -29,15 +43,15 @@ import { useNavigate } from 'react-router-dom'; // React Router for navigation
           label="Products"
           value="products"
           icon={<ShoppingCartIcon />}
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/products')}
         />
         <BottomNavigationAction
           label="Product Details"
           value="product details"
           icon={<InfoIcon />}
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/productdetails')}
         />
-        <BottomNavigationAction label="Checkout" value="checkout" icon={<PaymentIcon />} onClick={() => navigate('/')} />
       </BottomNavigation>
+    </Box>
     );
   }
