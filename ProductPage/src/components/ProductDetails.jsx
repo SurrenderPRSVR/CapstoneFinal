@@ -23,47 +23,59 @@ function ProductDetails() {
         getProduct();
     }, [id]);
 
-    const styles = {
-        container: {
-            padding: '20px',
-            maxWidth: '600px',
-            margin: 'auto',
-            border: '1px solid #ddd',
-            borderRadius: '8px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            backgroundColor: '#fff',
-        },
-        heading: {
-            fontSize: '24px',
-            marginBottom: '10px',
-        },
-        image: {
-            width: '100%',
-            borderRadius: '8px',
-            marginBottom: '10px',
-        },
-        description: {
-            fontSize: '16px',
-            marginBottom: '10px',
-            lineHeight: '1.5', 
-            color: '#333', 
-        },
-        price: {
-            fontWeight: 'bold',
-            color: '#007bff', 
-        },
-        button: {
-            padding: '10px 15px',
-            backgroundColor: '#007bff', 
-            color: '#fff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-        },
-        buttonHover: {
-            backgroundColor: '#0056b3', 
-        },
-    };
+const styles = {
+    body: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        backgroundColor: '#f0f0f0',
+    },
+    container: {
+        padding: '20px',
+        maxWidth: '600px',
+        margin: 'auto',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#fff',
+    },
+    heading: {
+        fontSize: '24px',
+        marginBottom: '10px',
+    },
+    styledForm: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+    },
+    roundInput: {
+        border: 'none',
+        borderRadius: '25px',
+        padding: '10px 20px',
+        fontSize: '16px',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+        transition: 'box-shadow 0.3s ease',
+    },
+    roundInputFocus: {
+        outline: 'none',
+        boxShadow: '0 6px 20px rgba(0, 0, 0, 0.3)',
+    },
+    roundButton: {
+        backgroundColor: '#007BFF',
+        color: 'white',
+        border: 'none',
+        borderRadius: '25px',
+        padding: '10px 20px',
+        fontSize: '16px',
+        cursor: 'pointer',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+        transition: 'box-shadow 0.3s ease',
+    },
+    roundButtonHover: {
+        boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)',
+    },
+};
 
 
     return (
