@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchProducts } from './apis'; // Import your API function
+import { fetchProducts } from './apis'; // Import API function
 
 function Products() {
     const [products, setProducts] = useState([]);
