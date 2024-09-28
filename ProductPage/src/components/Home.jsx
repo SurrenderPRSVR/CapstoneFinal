@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './FormStyles.css';
 
 
 function Home() {
@@ -17,25 +18,25 @@ function Home() {
         }
     }
     
-    
-
- return(
+return(
     <div>
         <h1>Shabby Chic</h1>
         <h2>Login</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="styled-form">
             <input 
                 type="email" 
                 onChange={(event)=>{setEmail(event.target.value);}} 
                 value={email} 
-                placeholder="Email" />
+                placeholder="Email" 
+                className="round-button"/>
 
             <input
                 type="password" 
                 onChange={(event)=>{setPassword(event.target.value)}} 
                 value={password} 
-                placeholder="Password" />
-            <button>Submit</button>
+                placeholder="Password" 
+                className="round-button"/>
+            <button className="round-button">Submit</button>
         </form>
     </div>
  );
